@@ -1,6 +1,6 @@
 # Disney Hotstar Project
 
-## Tik Tok
+## Tik Tok Pixel & Events
 
 ### Base Pixel
 ```
@@ -46,7 +46,7 @@ Please read the [documentation](https://ads.tiktok.com/marketing_api/docs?rid=5i
 - Add event parameters whenver possible - [documentation page for standard events](https://ads.tiktok.com/help/article?aid=10028)
 
 
-## Facebook Pixel
+## Facebook Pixel & Events
 
 Facebook Pixel ID to be used for the hotstar.com website:
 `996625781038866`
