@@ -49,7 +49,7 @@ Please read the [documentation](https://ads.tiktok.com/marketing_api/docs?rid=5i
 ## Facebook Pixel
 
 Facebook Pixel ID to be used for the hotstar.com website:
-`1234567890`
+`996625781038866`
 
 ### Events
 - Fire the `ViewContent` pixel event on every Title View event occuring on the hotstar website (watch a video).
@@ -62,7 +62,7 @@ Consult the [documentation](https://developers.facebook.com/docs/meta-pixel/refe
 The best way to add multiple Facebook pixels on the website is to use GTM Tag Templates, and for Facebook, this is officially provided by the Facebook team on the [following URL](https://github.com/facebookarchive/GoogleTagManager-WebTemplate-For-FacebookPixel) - but can also be installed directly from the Community Template Gallery. We suggest migrating the existing FB pixel onto this template and add the Indahash pixel ID into the same tags.
 
 
-# DEFERRED PROJECT UNTIL JULY 2022 - AppsFlyer Web SDK Information
+# DEFERRED PROJECT UNTIL JULY 2022: AppsFlyer Web SDK
 
 ```
 <!-- AppsFlyer web SDK -->
