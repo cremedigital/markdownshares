@@ -2,6 +2,7 @@
 
 ## Tik Tok
 
+### Base Pixel
 ```
 <script>
 !function (w, d, t) {
@@ -12,22 +13,56 @@
   ttq.page();
 }(window, document, 'ttq');
 </script>
-
-Events:
-
-<script>
-  ttq.instance('CA2QFR3C77U70J019350').track('SubmitForm');
-</script>
-
-questions:
-advanced matching - https://ads.tiktok.com/help/article?aid=10007891
-allow 1st-party cookies
-
-Docu:
-https://ads.tiktok.com/help/article?aid=10028
 ```
 
-# AppsFlyer
+### Recommended User Action Events:
+
+```
+<script>
+  // To be fired on Title Views (watch video)
+  ttq.instance('CA2QFR3C77U70J019350').track('ViewContent');
+</script>
+```
+```
+<script>
+  // To be fired on successful account sign-up
+  ttq.instance('CA2QFR3C77U70J019350').track('SubmitForm');
+</script>
+```
+```
+<script>
+  // To be fired on purchase/subscription - preferably also all purchase values, and "product" details are shared as parameters also - see documentation
+  ttq.instance('CA2QFR3C77U70J019350').track('Purchase');
+</script>
+```
+
+### Notes & Caveats
+Please read the [documentation](https://ads.tiktok.com/marketing_api/docs?rid=5ipocbxyw8v&id=1701890973258754#item-link-4.3) on instructions for installing multiple tiktok pixels on one site.
+
+
+### Optional by recommended extra settings:
+- advanced matching - [documentation](https://ads.tiktok.com/help/article?aid=10007891)
+- allow 1st-party cookies in pixel code snippet above
+- Add event parameters whenver possible - [documentation page for standard events](https://ads.tiktok.com/help/article?aid=10028)
+
+
+## Facebook Pixel
+
+Facebook Pixel ID to be used for the hotstar.com website:
+`1234567890`
+
+### Events
+- Fire the `ViewContent` pixel event on every Title View event occuring on the hotstar website (watch a video).
+- Fire the `CompleteRegistration` pixel event on successful account signup 
+- Fire the `Purchase` pixel event on successful purchase/membership.
+
+Consult the [documentation](https://developers.facebook.com/docs/meta-pixel/reference) for details on which parameters are required for each event above, and preferably use as many as them as possible and reasonable.
+
+### GTM Template Recommendation
+The best way to add multiple Facebook pixels on the website is to use GTM Tag Templates, and for Facebook, this is officially provided by the Facebook team on the [following URL](https://github.com/facebookarchive/GoogleTagManager-WebTemplate-For-FacebookPixel) - but can also be installed directly from the Community Template Gallery. We suggest migrating the existing FB pixel onto this template and add the Indahash pixel ID into the same tags.
+
+
+# DEFERRED PROJECT UNTIL JULY 2022 - AppsFlyer Web SDK Information
 
 ```
 <!-- AppsFlyer web SDK -->
@@ -63,7 +98,7 @@ AF('pba', 'event', {
 ```
 
 
-Do the following: 
+## Instructions
 
 Get the Web SDK Web Dev Key. Note! This is not the same key used by mobile apps.
 To get the Web Dev Key: 
@@ -74,7 +109,6 @@ If you implement Smart Banners, get the Smart Banner key.
 To get the Smart Banner Key:
 In AppsFlyer, go to Engagement & Deep Linking > Smart Banners.
 Copy the required Smart Banner Key. 
-
 
 To set conversion events:
 
@@ -92,8 +126,3 @@ Fire the JavaScript call to setCustomerUserId() as shown in the example that fol
 Note! Send the CUID as a string even if it is a number. Do so enclosing it in quotation marks.
 
 Associate all current user web events to distinct ID 663274 
-
-## Facebook Pixel
-
-Best is to use the Disney existing pixel, but we can provide indahash pixel also if needed.
-`Pixel ID: 1410048749070946`
