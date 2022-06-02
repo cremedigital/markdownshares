@@ -1,5 +1,11 @@
 # Disney Hotstar Project
 
+## Summary and Goal
+
+Pixels/Tags from Indahash ad accounts on Facebook, TikTok intended to be deployed onto the Disney+ Hotstar Malaysia website located on https://www.hotstar.com/my. Below are instructions for base tags + event tags with Indahash account ID's. 
+
+Additional instructions and recommendations have been included regarding running _multiple_ Facebook/TikTok pixels on the same site, which is possible as long as each platform's documentation is followed, links have been included accordingly. There are future plans to implement the AppsFlyer Web SDK onto the website; this part of the project is deferred until later notice. Sample instructions are left in here for reference purposes only, at the end of this file.
+
 ## Tik Tok Pixel & Events
 
 ### Base Pixel
